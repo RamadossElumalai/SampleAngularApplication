@@ -21,7 +21,8 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
 
-- task: CmdLine@2
-  displayName: "Working Directories files"
-  inputs:
-    script: 'dir'
+- script: |
+   cd dist
+   dir
+  displayName: 'working'
+     
