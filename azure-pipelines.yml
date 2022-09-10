@@ -21,8 +21,8 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
 
-- script: |
-   cd dist/kendogrid-angular
-   dir
-  displayName: 'working'
-     
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'dist'
+    publishLocation: 'Container'
