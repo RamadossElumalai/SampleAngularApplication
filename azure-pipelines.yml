@@ -22,7 +22,7 @@ steps:
   displayName: 'npm install and build'
 
 - script: |
-   cd dist
+   cd dist/kendogrid-angular
    dir
   displayName: 'working'
      
